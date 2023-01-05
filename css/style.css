@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: auto;
+    width: 1320px;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    background-color: #f6f6f6;
+    font-family: 'Playfair Display', serif;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#score{
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    color: #f6f6f6;
+    letter-spacing: 1px;
+    line-height: normal;
+    top: 50px;
+    right: 20%;
+}
+#board{
+    /* box-shadow: rgba(255, 247, 0, 0.5) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px; */
+    /* box-shadow: rgba(255, 247, 0, 0.56) 0px 22px 70px 4px; */
+    box-shadow: rgba(255, 247, 0, 0.17) 0px -23px 25px 0px inset, rgba(255, 247, 0, 0.15) 0px -36px 30px 0px inset, rgba(255, 247, 0, 0.1) 0px -79px 40px 0px inset, rgba(255, 247, 0, 0.06) 0px 2px 1px, rgba(255, 247, 0, 0.09) 0px 4px 2px, rgba(255, 247, 0, 0.09) 0px 8px 4px, rgba(255, 247, 0, 0.09) 0px 16px 8px, rgba(255, 247, 0, 0.09) 0px 32px 16px;
+    /* border: 2px solid #81af26; */
+    border-radius: 1px;
+    height: calc(100% - 25%);
+    width: 600px;
+    background-color: rgb(32, 28, 24);
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+.head{
+    background-color: #aaff00;
+    border-radius:5px;
+    z-index: 1;
+}
+.headUp{
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 0, 50% 50%);
+}
+.headBtm{
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 50% 50%, 0 100%, 0 0);
+}
+.headRight{
+    clip-path: polygon(100% 0%, 50% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+}
+.headLeft{
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 50% 50%, 0% 0%);
+}
+.snake{
+    background-color: rgb(4, 1, 27);
+    border-radius:8px;
+}
+.food{
+    background: #9c0747;
+    background: linear-gradient(#9c0747,rgba(255, 255, 255, 0.798));
+    border-radius:10px;
+}
